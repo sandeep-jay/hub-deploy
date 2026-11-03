@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jupyter-ai-biorouter-acp"
+version = "0.0.1.dev"
+license-expression = "BSD-3-Clause"
+requires-python = ">=3.11"
+dependencies = [
+    "jupyter-ai-acp-client",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["jupyter_ai_biorouter_acp"]
+
+[project.entry-points."jupyter_ai.personas"]
+biorouter-acp = "jupyter_ai_biorouter_acp.persona:BioRouterACPPersona"
