@@ -19,7 +19,7 @@ jupyterhub:
   singleuser:
     events: true
     image:
-      name: ghcr.io/bids/aifutureshub/user
+      name: ghcr.io/bids/aifutureshub-user
       tag: main
       pullPolicy: Always
     memory:

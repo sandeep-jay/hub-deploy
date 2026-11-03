@@ -80,7 +80,7 @@ sops will then write back the updated encrypted file.
 
 ### Adding and updating packages
 
-The user image is managed in this repo in `images/user`.
+The user images are managed in this repo in subdirectories of `images/`.
 The environment is (mostly) managed with [pixi],
 so you can follow the pixi docs for various operations on the environment.
 The image is built and published from GitHub Actions.
@@ -88,7 +88,7 @@ The image is built and published from GitHub Actions.
 You can add packages to the image with:
 
 ```bash
-cd images/user
+cd images/$image_name
 pixi add "$package=*"
 ```
 
