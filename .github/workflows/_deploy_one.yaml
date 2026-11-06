@@ -25,12 +25,12 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: "3.13"
       - uses: azure/setup-helm@9bc31f4ebc9c6b171d7bfbaa5d006ae7abdb4310 # v5.0.1
       - name: install sops
-        uses: step-security/mozilla-sops-action@26ce9aa7a4c47b98eeefbd18665245dd58c4eb1b # v2.1.1
+        uses: step-security/mozilla-sops-action@96171ff3d4516d18224d81e170155845817ad93e # v2.1.2
       - name: install requirements
         run: |
           pip install -r requirements.txt
