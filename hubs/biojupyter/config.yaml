@@ -18,7 +18,11 @@ jupyterhub:
           - "user:email"
           - "read:org"
   singleuser:
+    # match biojupyter.user_service_account
     serviceAccountName: biojupyter-hub-user
+    cloudMetadata:
+      # needed for workload identity
+      blockWithIptables: false
     memory:
       limit: 4G
       guarantee: 2G
