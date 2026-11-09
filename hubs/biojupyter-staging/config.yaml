@@ -18,6 +18,7 @@ jupyterhub:
           - "user:email"
           - "read:org"
   singleuser:
+    serviceAccountName: biojupyter-staging-hub-user
     memory:
       limit: 4G
       guarantee: 2G
